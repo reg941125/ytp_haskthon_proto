@@ -12,7 +12,7 @@ export default function Home() {
               </div>
               <div>
                 <div className="text-sm text-zinc-600">職涯探索</div>
-                <div className="text-2xl font-semibold tracking-tight">employa</div>
+                <div className="text-2xl font-semibold tracking-tight">EmploYA!</div>
               </div>
             </div>
 

@@ -71,7 +71,7 @@ export function DailyQuestionCard({
           </div>
         </div>
       ) : (
-        <div className="mt-4 text-xs text-zinc-600">作答後會自動計入今日 strike。</div>
+        <div className="mt-4 text-xs text-zinc-600">作答後會自動計入今日 streak。</div>
       )}
     </div>
   );
