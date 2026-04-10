@@ -3,18 +3,12 @@
 import Image from "next/image";
 import type { CareerRole } from "@/lib/types";
 
-function stableNumberFromString(s: string): number {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) h = (h * 31 + s.charCodeAt(i)) >>> 0;
-  return h;
-}
-
 export function ExplorePhotoCard({ role }: { role: CareerRole }) {
   const subtitle = role.tags[0] ? role.tags[0] : "career";
 
   return (
     <div className="relative overflow-hidden rounded-[28px] border border-black/10 bg-white shadow-[0_30px_90px_rgba(2,6,23,0.14)]">
-      <div className="relative aspect-[3/4] w-full">
+      <div className="relative h-[280px] w-full sm:h-[340px]">
         <Image
           src={"/jobs/data_analyst.jpg"}
           alt={"/jobs/data_analyst.jpg"}
@@ -57,10 +51,12 @@ export function ExplorePhotoCard({ role }: { role: CareerRole }) {
           </span>
         </div>
 
-        <div className="mt-4 grid gap-4 sm:grid-cols-2">
-          <div className="rounded-2xl border border-black/10 bg-white p-4">
-            <div className="text-xs font-semibold tracking-wide text-zinc-600">代表技能</div>
-            <ul className="mt-3 space-y-2 text-sm text-zinc-900">
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:gap-4">
+          <div className="rounded-2xl border border-black/10 bg-white p-3 sm:p-4">
+            <div className="text-[11px] font-semibold tracking-wide text-zinc-600 sm:text-xs">
+              代表技能
+            </div>
+            <ul className="mt-3 space-y-2 text-xs text-zinc-900 sm:text-sm">
               {role.skills.slice(0, 5).map((s) => (
                 <li key={s} className="flex items-start gap-2">
                   <span className="mt-1 size-1.5 shrink-0 rounded-full bg-sky-500/70" />
@@ -69,9 +65,11 @@ export function ExplorePhotoCard({ role }: { role: CareerRole }) {
               ))}
             </ul>
           </div>
-          <div className="rounded-2xl border border-black/10 bg-white p-4">
-            <div className="text-xs font-semibold tracking-wide text-zinc-600">日常工作</div>
-            <ul className="mt-3 space-y-2 text-sm text-zinc-900">
+          <div className="rounded-2xl border border-black/10 bg-white p-3 sm:p-4">
+            <div className="text-[11px] font-semibold tracking-wide text-zinc-600 sm:text-xs">
+              日常工作
+            </div>
+            <ul className="mt-3 space-y-2 text-xs text-zinc-900 sm:text-sm">
               {role.dayToDay.slice(0, 5).map((s) => (
                 <li key={s} className="flex items-start gap-2">
                   <span className="mt-1 size-1.5 shrink-0 rounded-full bg-fuchsia-500/60" />
