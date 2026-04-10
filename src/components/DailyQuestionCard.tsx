@@ -21,7 +21,7 @@ export function DailyQuestionCard({
           </div>
         </div>
         <div className="hidden rounded-2xl border border-black/10 bg-white px-3 py-2 text-xs text-zinc-700 sm:block">
-          每天一題，累積 strike
+          每天一題，累積 streak
         </div>
       </div>
 

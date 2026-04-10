@@ -5,7 +5,7 @@ export function StrikeBadge({ strike }: { strike: number }) {
         🔥
       </span>
       <span className="font-semibold tabular-nums">{strike}</span>
-      <span className="text-zinc-600">strike</span>
+      {/* <span className="text-zinc-600">strike</span> */}
     </div>
   );
 }
